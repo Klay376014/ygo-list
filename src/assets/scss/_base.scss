@@ -71,6 +71,7 @@ img{
   width: 100%;
   height: auto;
   flex-basis:auto;
+  margin-bottom: 8px;
 }
 
 button{
@@ -95,21 +96,22 @@ button{
     li{
       display: flex;
       flex-direction: column;
-      width: 30%;
-      margin-left: 1.66%;
-      margin-right: 1.66%;
+      width: 24%;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
       justify-content: space-between;
       button{
         align-self: start;
       }
       @include pad{
-        width: 45%;
-        margin-left: 2.5%;
+        width: 30%;
+        margin-left: 1.66%;
+        margin-right: 1.66%;
       }
       @include mobile{
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        width: 45%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
       }
     }
   }
@@ -118,4 +120,8 @@ button{
 .content{
   display: flex;
       flex-direction: column;
+}
+
+strong{
+  margin-bottom: 8px;
 }

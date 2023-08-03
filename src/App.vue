@@ -3,11 +3,14 @@ import { ref, onMounted } from "vue";
 
 const getStoredList = () => {
   const storedListJSON = localStorage.getItem('cardList');
+  console.log(storedListJSON);
   const storedList = JSON.parse(storedListJSON);
+  console.log(storedList);
   return Array.isArray(storedList) ? storedList : [];
 };
 
-const list = ref([]);
+const list = ref(getStoredList());
+console.log(list.value);
 const newCard = ref({ cardNumber: "", cardQuantity: 0, user: "" });
 
 const addCard = () => {
@@ -22,7 +25,7 @@ const addCard = () => {
   }
 };
 
-const src = "http://cardimage.cardbox.sc/SC/";
+const src = "https://images.ygoprodeck.com/images/cards/";
 
 const deleteCard = (index) => {
   const confirmation = confirm("確定刪除此卡片？");
@@ -33,11 +36,12 @@ const deleteCard = (index) => {
 };
 
 const updateLocalStorage = () => {
-  localStorage.setItem("cardList", JSON.stringify(list));
+  localStorage.setItem("cardList", JSON.stringify(list.value));
 };
 
 onMounted(() => {
   list.value = getStoredList();
+  console.log(list.value);
 });
 
 </script>
@@ -51,7 +55,7 @@ onMounted(() => {
         <input type="text" v-model="newCard.cardNumber" id="cardNumber" required />
       </div>
       <div>
-        <label for="cardQuantity">卡片張數：</label>
+        <label for="cardQuantity">需求張數：</label>
         <input type="number" v-model="newCard.cardQuantity" id="cardQuantity" max="3" required />
       </div>
       <div>
@@ -69,7 +73,7 @@ onMounted(() => {
             <img :src="src + card.cardNumber + '.jpg'" alt="" />
           </div>
           <div class="content">
-            <strong>卡片張數：{{ card.cardQuantity }}</strong>
+            <strong>需求張數：{{ card.cardQuantity }}</strong>
 
             <strong>填表人：{{ card.user }}</strong>
             <button @click="deleteCard(index)">刪除</button>
