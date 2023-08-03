@@ -1,0 +1,186 @@
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+    padding: 0 36px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 374px;
+    padding: 0 13px;
+  }
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+body, button {
+  font-family: Noto Sans TC, sans-serif;
+}
+
+.text-roboto {
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  form {
+    flex-direction: column;
+  }
+}
+form > div {
+  width: 30%;
+}
+@media (max-width: 767px) {
+  form > div {
+    margin-bottom: 8px;
+  }
+}
+form button {
+  align-self: center;
+}
+
+input {
+  width: 50%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  flex-basis: auto;
+}
+
+button {
+  background-color: rgb(6, 41, 29);
+  border: 2px solid rgb(1, 32, 12);
+  border-radius: 16px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 2px 16px;
+  width: auto;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(10, 73, 51);
+  border: 2px solid rgb(16, 95, 44);
+}
+
+.list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list ul li {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 1.66%;
+  margin-right: 1.66%;
+  justify-content: space-between;
+}
+.list ul li button {
+  align-self: start;
+}
+@media (max-width: 992px) {
+  .list ul li {
+    width: 45%;
+    margin-left: 2.5%;
+  }
+}
+@media (max-width: 767px) {
+  .list ul li {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

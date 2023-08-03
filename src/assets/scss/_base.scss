@@ -1,0 +1,121 @@
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0";
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+  @include pad{
+    max-width: 768px;
+    padding: 0 36px;
+  }
+  @include mobile{
+    max-width: 374px;
+    padding: 0 13px;
+  }
+}
+
+body{
+  background-color: #000;
+  color: #fff;
+}
+
+body, button{
+  font-family: Noto Sans TC, sans-serif;
+}
+
+.text-roboto {
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1{
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+h2{
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+form{
+  display: flex;
+  margin-bottom: 20px;
+  @include mobile{
+    flex-direction: column;
+  }
+  &>div{
+    width: 30%;
+    @include mobile{
+      margin-bottom: 8px;
+    }
+  }
+  button{
+    align-self: center;
+  }
+}
+
+input{
+  width: 50%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+  flex-basis:auto;
+}
+
+button{
+  background-color: rgb(6, 41, 29);
+  border: 2px solid rgb(1, 32, 12);
+  border-radius: 16px;
+  color:#ffffff;
+  font-size: 16px;
+  padding:2px 16px;
+  width: auto;
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(10, 73, 51);
+  border: 2px solid rgb(16, 95, 44);
+  }
+}
+
+.list{
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      margin-left: 1.66%;
+      margin-right: 1.66%;
+      justify-content: space-between;
+      button{
+        align-self: start;
+      }
+      @include pad{
+        width: 45%;
+        margin-left: 2.5%;
+      }
+      @include mobile{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.content{
+  display: flex;
+      flex-direction: column;
+}
